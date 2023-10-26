@@ -1,0 +1,11 @@
+provider_installation {
+  filesystem_mirror {
+    path = "/home/{user}/tf_cache"
+    include = ["registry.terraform.io/hashicorp/*"]
+  }
+  direct {
+    exclude = ["registry.terraform.io/hashicorp/*"]
+  }
+}
+plugin_cache_dir = "home/{user}/tf_cache"
+disable_checkpoint=true
